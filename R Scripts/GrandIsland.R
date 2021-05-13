@@ -507,24 +507,38 @@ ggplot(catch.depth, aes(x=MidDepth_ft, y=freq)) +
 
 ggsave(here('Plots and Tables/Catch.by.DepthSpecies.png'), dpi = 300, width = 35, height = 16, units = "cm")
 
+
+##############################################################################################
+##Depth Density all meshes
+
+ggplot(catch.depth, aes(x=MidDepth_ft, y = ..scaled.., weight=catch, group=legend, fill=legend)) + 
+  geom_density(alpha=0.4) +
+  plot_theme + 
+  theme(legend.position=c(0.15,0.85), 
+        legend.title = element_blank()) +
+  scale_x_continuous(breaks=pretty_breaks(), limits = c(200, 800)) +
+  scale_y_continuous(expand=c(0,0)) +
+  scale_fill_brewer(palette="Accent") +
+  labs( x='Depth (ft)', y='Relative density',
+        title='Lake Superior Grand Island Winter Ciscoe Collections',
+        subtitle='Collections made November-January, 2017-2020',
+        caption=ann_data_access) 
+
+ggsave(here('Plots and Tables/Ciscoes.DepthDensity.png'), dpi = 300, width = 35, height = 16, units = "cm")
+
+
 #########################################################################################
-##Top three ciscoes - by depth - density plot for 1.5 inch mesh
+##Depth density for bloater, cisco, and kiyi
+
+##All ciscoes - by depth all meshes
 Scatch <- ciscoes.winter %>%
   group_by(SPECIES) %>%
   summarize(fish=n())
 
 catch.depth <- ciscoes.winter %>%
-  filter(GNetMesh_in == 1.5) %>%
   group_by(SPECIES, MidDepth_ft) %>%
   summarize(catch=n()) %>%
   mutate(freq = catch / sum(catch)) %>%
-  ungroup() %>%
-#  subset(SPECIES==206 | 
-#           SPECIES == 204 | 
-#           SPECIES == 202 |  
-#           SPECIES == 207 |
-#           SPECIES == 208 |
-#           SPECIES == 210) %>%
   subset(SPECIES==206 | 
            SPECIES == 204 | 
            SPECIES == 202) %>%
@@ -540,12 +554,50 @@ ggplot(catch.depth, aes(x=MidDepth_ft, y = ..scaled.., weight=catch, group=legen
   scale_x_continuous(breaks=pretty_breaks(), limits = c(200, 800)) +
   scale_y_continuous(expand=c(0,0)) +
   scale_fill_brewer(palette="Accent") +
+  labs( x='Depth (ft)', y='Relative density',
+        title='Lake Superior Grand Island Winter Ciscoe Collections',
+        subtitle='Collections made November-January, 2017-2020',
+        caption=ann_data_access) 
+
+ggsave(here('Plots and Tables/Cisco.Bloater.Kiyi.DepthDensity.png'), dpi = 300, width = 35, height = 16, units = "cm")
+
+#########################################################################################
+##Kiyi- by depth - density plot for 1.5 inch mesh
+
+catch.depth <- ciscoes.winter %>%
+  filter(GNetMesh_in == 1.5) %>%
+  group_by(SPECIES, MidDepth_ft) %>%
+  summarize(catch=n()) %>%
+  mutate(freq = catch / sum(catch)) %>%
+  ungroup() %>%
+  subset(SPECIES==206) %>%
+  left_join(sci.names)
+
+Scatch <- ciscoes.winter %>%
+  filter(GNetMesh_in == 1.5) %>%
+  group_by(SPECIES) %>%
+  summarize(fish=n())
+
+catch.depth <- catch.depth %>%
+  left_join(Scatch) %>%
+  unite("legend", COMMON_NAME,fish, sep=", ")
+
+
+ggplot(catch.depth, aes(x=MidDepth_ft, y = ..scaled.., weight=catch, group=legend, fill=legend)) + 
+  geom_density(alpha=0.4) +
+  plot_theme + 
+  theme(legend.position=c(0.15,0.85), 
+        legend.title = element_blank()) +
+  scale_x_continuous(breaks=pretty_breaks(), limits = c(200, 800)) +
+  scale_y_continuous(expand=c(0,0)) +
+  scale_fill_brewer(palette="Accent") +
 labs( x='Depth (ft)', y='Relative density',
       title='Lake Superior Grand Island Winter Ciscoe Collections in 1.5 inch Mesh',
       subtitle='Collections made November-January, 2017-2020',
       caption=ann_data_access) 
 
-ggsave(here('Plots and Tables/Catch.by.DepthDensity.png'), dpi = 300, width = 35, height = 16, units = "cm")
+ggsave(here('Plots and Tables/Kiyi.DepthDensity_1.5inch.png'), dpi = 300, width = 35, height = 16, units = "cm")
+
 
 #########################################################################################
 ##All ciscoes - by mesh - density plot
