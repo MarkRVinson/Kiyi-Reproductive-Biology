@@ -190,7 +190,7 @@ ggplot(year.sum.fish, aes(x=winter.year, y=fishes)) +
          size = guide_legend(guide = 'none')) +
   labs( x='Winter', y='Count',
         title='Lake Superior Grand Island Winter Ciscoe Collections',
-        subtitle='Collections made November-January, 2017-2020',
+        subtitle='Collections made November-January, 2017-2021',
         caption=ann_data_access) 
 
 ggsave(here('Plots and Tables/Catch.by.YearSpecies.png'), dpi = 300, width = 35, height = 16, units = "cm")
@@ -225,7 +225,7 @@ ggplot(year.effort.sum, aes(x=winter.year, y=sets)) +
   guides(fill= guide_legend(title = "Mesh in inches", direction="horizontal", title.position = "top")) + 
   labs( x='Winter', y='Number of gill net sets',
         title='Lake Superior Grand Island Winter Ciscoe Collections',
-        subtitle='Collections made November-January, 2017-2020',
+        subtitle='Collections made November-January, 2017-2021',
         caption=ann_data_access) 
 
 ggsave(here('Plots and Tables/Catch.by.YearSets.png'), dpi = 300, width = 35, height = 16, units = "cm")
@@ -258,7 +258,7 @@ ggplot(subset(ciscoes.map, Method == "Gillnet"), aes(x=Long_DD, y = Lat_DD)) +
         legend.title = element_text(size=20, family='serif'), 
         legend.text = element_text(size=20, family='serif')) +
   labs(title='Grand Island Winter Ciscoe Collection Sites',
-       subtitle='Collections made November-January, 2017-2020',
+       subtitle='Collections made November-January, 2017-2021',
        caption=ann_data_access) 
 
 ggsave(here('Plots and Tables/GrandIsleGillNetLocations.png'), dpi = 300, width = 40, height = 20, units = "cm")
@@ -278,7 +278,7 @@ ggplot(subset(ciscoes.map, Method == "Gillnet"), aes(x=Long_DD, y = Lat_DD)) +
         legend.title = element_text(size=20, family='serif'), 
         legend.text = element_text(size=20, family='serif')) +
   labs(title='Grand Island Winter Ciscoe Collection Sites',
-       subtitle='Collections made November-January, 2017-2020',
+       subtitle='Collections made November-January, 2017-2021',
        caption=ann_data_access) 
 
 ggsave(here('Plots and Tables/GrandIsleGillNetLocationsDepths.png'), dpi = 300, width = 40, height = 20, units = "cm")
@@ -297,7 +297,7 @@ ggplot(ciscoes.map, aes(x=Long_DD, y = Lat_DD)) +
         legend.position = c(.15, .85), 
         legend.text = element_text(size=20, family='serif')) +
   labs(title='Kiyi Gonad Maturation Collection Locations',
-       subtitle='Collections made November-January, 2017-2020',
+       subtitle='Collections made November-January, 2017-2021',
        caption=ann_data_access) 
 
 ggsave(here('Plots and Tables/Kiyi_GSI_Sites.png'), dpi = 300, width = 40, height = 20, units = "cm")
@@ -315,7 +315,7 @@ ggplot(ciscoes.map, aes(x=Long_DD, y = Lat_DD)) +
         legend.position = c(.15, .85), 
         legend.text = element_text(size=20, family='serif')) +
   labs(title='Kiyi Gonad Maturation Collection Locations',
-       subtitle='Collections made November-January, 2017-2020',
+       subtitle='Collections made November-January, 2017-2021',
        caption=ann_data_access) 
 
 ggsave(here('Plots and Tables/Kiyi_GSI_Seasons.png'), dpi = 300, width = 40, height = 20, units = "cm")
@@ -358,7 +358,7 @@ ggplot(catch.mesh, aes(x=GNetMesh_in, y=StartDepth_ft)) +
          size = guide_legend(guide = 'none')) +
   labs( x='Mesh (inches)', y='Depth (ft)',
         title='Lake Superior Grand Island Winter Ciscoe Collections',
-        subtitle='Collections made November-January, 2017-2020',
+        subtitle='Collections made November-January, 2017-2021',
         caption=ann_data_access) 
 
 #########################################################################################
@@ -408,7 +408,7 @@ ggplot(catch.mesh, aes(x=xaxis, y=freq)) +
          size = guide_legend(guide = 'none')) +
   labs( x='Gill net mesh (inches)', y='Proporton of species` total catch by mesh',
         title='Lake Superior Grand Island Winter Ciscoe Collections',
-        subtitle='Collections made November-January, 2017-2020',
+        subtitle='Collections made November-January, 2017-2021',
         caption=ann_data_access) 
 
 ggsave(here('Plots and Tables/Catch.by.MeshSpecies.png'), dpi = 300, width = 35, height = 16, units = "cm")
@@ -454,7 +454,7 @@ ggplot(catch.depth, aes(x=MidDepth_ft, y=freq)) +
          size = guide_legend(guide = 'none')) +
   labs( x='Depth (ft)', y='Proporton of catch by species',
         title='Lake Superior Grand Island Winter Ciscoe Collections in 1.5 inch Mesh',
-        subtitle='Collections made November-January, 2017-2020',
+        subtitle='Collections made November-January, 2017-2021',
         caption=ann_data_access) 
 
 #+ facet_wrap(~COMMON_NAME, scales="free_y")
@@ -500,7 +500,7 @@ ggplot(catch.depth, aes(x=MidDepth_ft, y=freq)) +
          size = guide_legend(guide = 'none')) +
   labs( x='Depth (ft)', y='Proporton of catch by species',
         title='Lake Superior Grand Island Winter Ciscoe Collections',
-        subtitle='Collections made November-January, 2017-2020',
+        subtitle='Collections made November-January, 2017-2021',
         caption=ann_data_access) 
 
 #+ facet_wrap(~COMMON_NAME, scales="free_y")
@@ -521,7 +521,7 @@ ggplot(catch.depth, aes(x=MidDepth_ft, y = ..scaled.., weight=catch, group=legen
   scale_fill_brewer(palette="Accent") +
   labs( x='Depth (ft)', y='Relative density',
         title='Lake Superior Grand Island Winter Ciscoe Collections',
-        subtitle='Collections made November-January, 2017-2020',
+        subtitle='Collections made November-January, 2017-2021',
         caption=ann_data_access) 
 
 ggsave(here('Plots and Tables/Ciscoes.DepthDensity.png'), dpi = 300, width = 35, height = 16, units = "cm")
@@ -556,7 +556,7 @@ ggplot(catch.depth, aes(x=MidDepth_ft, y = ..scaled.., weight=catch, group=legen
   scale_fill_brewer(palette="Accent") +
   labs( x='Depth (ft)', y='Relative density',
         title='Lake Superior Grand Island Winter Ciscoe Collections',
-        subtitle='Collections made November-January, 2017-2020',
+        subtitle='Collections made November-January, 2017-2021',
         caption=ann_data_access) 
 
 ggsave(here('Plots and Tables/Cisco.Bloater.Kiyi.DepthDensity.png'), dpi = 300, width = 35, height = 16, units = "cm")
@@ -593,7 +593,7 @@ ggplot(catch.depth, aes(x=MidDepth_ft, y = ..scaled.., weight=catch, group=legen
   scale_fill_brewer(palette="Accent") +
 labs( x='Depth (ft)', y='Relative density',
       title='Lake Superior Grand Island Winter Ciscoe Collections in 1.5 inch Mesh',
-      subtitle='Collections made November-January, 2017-2020',
+      subtitle='Collections made November-January, 2017-2021',
       caption=ann_data_access) 
 
 ggsave(here('Plots and Tables/Kiyi.DepthDensity_1.5inch.png'), dpi = 300, width = 35, height = 16, units = "cm")
@@ -627,7 +627,7 @@ ggplot(catch.mesh, aes(x=GNetMesh_in, y = ..scaled.., weight=catch, group=legend
   scale_fill_brewer(palette="Accent") +
   labs( x='Gill net mesh (inches)', y='Relative density',
         title='Lake Superior Grand Island Winter Ciscoe Collections',
-        subtitle='Collections made November-January, 2017-2020',
+        subtitle='Collections made November-January, 2017-2021',
         caption=ann_data_access) 
 
 ggsave(here('Plots and Tables/Catch.by.MeshDensity.png'), dpi = 300, width = 35, height = 16, units = "cm")
@@ -675,7 +675,7 @@ ggplot(catch.date, aes(x=as.factor(Date), y=freq)) +
          size = guide_legend(guide = 'none')) +
   labs( x='Date', y='Proportion of catch by species',
         title='Lake Superior Grand Island Winter Ciscoe Collections',
-        subtitle='Collections made November-January, 2017-2020',
+        subtitle='Collections made November-January, 2017-2021',
         caption=ann_data_access) 
 
 #+ facet_wrap(~COMMON_NAME, scales="free_y")
@@ -724,7 +724,7 @@ ggplot(catch.date, aes(x=as.factor(Date), y=freq)) +
          size = guide_legend(guide = 'none')) +
   labs( x='Date', y='Proportion of catch by species',
         title='Lake Superior Grand Island Winter Ciscoe Collections in 1.5 inch Mesh',
-        subtitle='Collections made November-January, 2017-2020',
+        subtitle='Collections made November-January, 2017-2021',
         caption=ann_data_access) 
 
 #+ facet_wrap(~COMMON_NAME, scales="free_y")
@@ -906,7 +906,7 @@ ggplot(bloater.gsi, aes(x=Dorder, y=GSIweek.mean)) +
   scale_fill_brewer(palette="Accent") +
   labs( x='Week', y='Mean weekly gonadosomatic index',
         title='Lake Superior Bloater Maturation',
-        subtitle='Collections made November-January, 2017-2020',
+        subtitle='Collections made November-January, 2017-2021',
         caption=ann_data_access) 
 
 
@@ -937,7 +937,7 @@ ggplot(cisco.gsi, aes(x=Dorder, y=GSIweek.mean)) +
   scale_fill_brewer(palette="Accent") +
   labs( x='Week', y='Mean weekly gonadosomatic index',
         title='Lake Superior Cisco Maturation',
-        subtitle='Collections made November-January, 2017-2020',
+        subtitle='Collections made November-January, 2017-2021',
         caption=ann_data_access) 
 
 
