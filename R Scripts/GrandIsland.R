@@ -1296,9 +1296,9 @@ ggsave(here('Plots and Tables/SpeciesDepths.ThenandNowWinter.png'), dpi = 300, w
 ##########################################################################################################
 #Kiyi fecundity 
 ##########################################################################################################
-f1 <-read_xlsx(here('Data','GICiscoes.xlsx'), sheet = 'KiyiEggs')  
+f1 <-read_xlsx(here('Data','GICiscoes.xlsx'), sheet = 'KiyiEggCount')  
 
-fecundity <-read_xlsx(here('Data','GICiscoes.xlsx'), sheet = 'KiyiEggs') %>%
+fecundity <-read_xlsx(here('Data','GICiscoes.xlsx'), sheet = 'KiyiEggCount') %>%
   pivot_longer(7:11, names_to = "Replicate", values_to = "Eggs_g", values_drop_na = TRUE) %>%
   group_by(Fish_Number) %>%
   summarise(EggWt.mean = mean(Eggs_g), na.rm=TRUE)
