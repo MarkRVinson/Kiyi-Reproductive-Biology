@@ -5,4 +5,4 @@ Kiyi Ovary Maturation Stages
 ![KiyiMaturationImages](https://github.com/MarkRVinson/Kiyi-Reproductive-Biology/blob/main/Plots%20and%20Tables/KiyiPaper/KiyiMaturationImages.jpg)
 
 Kiyi Gonadosomatic Index
-![Kiyi.MaleFemale.GSI](https://github.com/MarkRVinson/Kiyi-Reproductive-Biology/blob/main/Plots%20and%20Tables/KiyiPaper/KiyiFecundity length ripeB.png)
+![Kiyi.MaleFemale.GSI](https://github.com/MarkRVinson/Kiyi-Reproductive-Biology/blob/main/Plots%20and%20Tables/KiyiPaper/Kiyi.MaleFemale.GSI.png)
