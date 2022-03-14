@@ -4,7 +4,7 @@ Awesome data on Kiyi spawning timing, spawning habitat, fecundity. All things Ki
 
 ![KiyiMaturationImages](https://github.com/MarkRVinson/Kiyi-Reproductive-Biology/blob/main/Plots%20and%20Tables/KiyiPaper/KiyiMaturationImages.jpg)
 
-![KiyiFecundity](https://user-images.githubusercontent.com/58261765/131673959-f06d66fd-5deb-4fab-9f7d-bd51171e6f6f.png)
+![KiyiFecundity](https://github.com/MarkRVinson/Kiyi-Reproductive-Biology/blob/main/Plots%20and%20Tables/KiyiPaper/![KiyiFecundity length ripeB.png)
 
 ![GrandIsleGillNetLocationsDepths](https://user-images.githubusercontent.com/58261765/130830074-9eb95ad5-39f9-4814-b4f9-0e239dc47bcd.png)
 
