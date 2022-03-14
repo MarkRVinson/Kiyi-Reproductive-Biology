@@ -2,7 +2,7 @@
 
 Awesome data on Kiyi spawning timing, spawning habitat, fecundity. All things Kiyi
 
-![210032_kiyi_122606](https://user-images.githubusercontent.com/58261765/117163592-6ade2400-ad89-11eb-8359-aecf6d9ffa51.jpg)
+![KiyiMaturationImages](https://user-images.githubusercontent.com/58261765/117163592-6ade2400-ad89-11eb-8359-aecf6d9ffa51.jpg)
 
 ![KiyiFecundity](https://user-images.githubusercontent.com/58261765/131673959-f06d66fd-5deb-4fab-9f7d-bd51171e6f6f.png)
 
