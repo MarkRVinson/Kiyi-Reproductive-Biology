@@ -4,8 +4,8 @@ Awesome data on Kiyi spawning timing, spawning habitat, fecundity. All things Ki
 
 Kiyi Ovary Maturation Stages
 
-![KiyiMaturationImages](https://github.com/MarkRVinson/Kiyi-Reproductive-Biology/blob/main/Plots%20and%20Tables/KiyiPaper/KiyiMaturationImages.jpg)
+![Plate1](https://github.com/MarkRVinson/Kiyi-Reproductive-Biology/blob/main/TAFS%20/KiyiPaper/Plate1.png)
 
 Kiyi Gonadosomatic Index
 
-![Kiyi.MaleFemale.GSI](https://github.com/MarkRVinson/Kiyi-Reproductive-Biology/blob/main/Plots%20and%20Tables/KiyiPaper/Kiyi.MaleFemale.GSI.png)
+![Fig5](https://github.com/MarkRVinson/Kiyi-Reproductive-Biology/blob/main/TAFS%20/KiyiPaper/Fig5.png)
